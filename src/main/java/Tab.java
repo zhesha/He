@@ -1,5 +1,5 @@
+import java.io.PrintStream;
 import java.text.DecimalFormat;
-
 import static java.lang.Math.cos;
 
 /**
@@ -7,9 +7,13 @@ import static java.lang.Math.cos;
  */
 public class Tab {
     public static void main(String[] args) {
-        System.out.println("Function f(x)=2cos(x)+cos(2x) have values:");
+        printFunctionTabulation(System.out);
+    }
+
+    static void printFunctionTabulation(PrintStream printer) {
+        printer.println("Function f(x)=2cos(x)+cos(2x) have values:");
         for (double i = 0; i <= 5; i += 0.5) {
-            System.out.println("for x=" + new DecimalFormat("0.0").format(i) + " values is: " + new DecimalFormat("0.##").format(calculate(i)));
+            printer.println("for x=" + new DecimalFormat("0.0").format(i) + " values is: " + new DecimalFormat("0.##").format(calculate(i)));
         }
     }
 
