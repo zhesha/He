@@ -15,4 +15,9 @@ class TabTest {
     void main() {
         Tab.main(new String[]{});
     }
+
+    @Test
+    void calculate() {
+        assertEquals(3, Tab.calculate(0));
+    }
 }
